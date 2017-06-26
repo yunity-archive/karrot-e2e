@@ -10,6 +10,7 @@ dependencies:
   pre:
     - createdb fstool_e2etest
   post:
+    - bash get_latest_chrome.sh
     - bash setup_frontend.sh:
         background: true
     - bash setup_backend.sh:
