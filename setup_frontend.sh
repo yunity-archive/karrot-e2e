@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-git clone https://github.com/yunity/foodsaving-frontend
+git clone --depth 1 https://github.com/yunity/foodsaving-frontend
 cd foodsaving-frontend
 # TODO checkout given branch
 # TODO restore node_modules from cache
