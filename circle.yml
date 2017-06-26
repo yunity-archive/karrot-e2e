@@ -3,6 +3,8 @@ machine:
     version: 8.1.2
   python:
     version: 3.5.3
+  services:
+    - redis
 
 dependencies:
   pre:
