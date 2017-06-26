@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   pre:
-    - createdb -u ubuntu fstool_e2etest
+    - createdb fstool_e2etest
   post:
     - bash setup_frontend.sh
     - bash setup_backend.sh
