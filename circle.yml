@@ -1,0 +1,12 @@
+dependencies:
+  post:
+    - bash setup_frontend.sh:
+        background: true
+
+    - bash setup_backend.sh:
+        background: true
+
+    - bash setup_webdriver.sh:
+        background: true
+
+    - bash wait_for_server.sh
