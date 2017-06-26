@@ -15,4 +15,4 @@ cp config/local_settings.py.ci config/local_settings.py
 # python manage.py reset_db # only necessary if run on your own machine
 python manage.py migrate
 python manage.py create_sample_data # optional
-python manage.py runserver &
+python manage.py runserver

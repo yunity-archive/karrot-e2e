@@ -10,7 +10,11 @@ dependencies:
   pre:
     - createdb fstool_e2etest
   post:
-    - bash setup_frontend.sh
-    - bash setup_backend.sh
-    - bash setup_webdriver.sh
+    - bash setup_frontend.sh:
+        background: true
+    - bash setup_backend.sh:
+        background: true
+    - bash setup_webdriver.sh:
+        background: true
     - wget --retry-connrefused --no-check-certificate -T 30 http://localhost:4444
+    - bash wait_for_servers.sh

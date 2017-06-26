@@ -8,4 +8,4 @@ cd foodsaving-frontend
 npm install
 # TODO cache node_modules
 echo "BACKEND=http://localhost:8000" > .env
-npm run dev &
+npm run dev
