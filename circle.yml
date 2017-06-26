@@ -13,4 +13,4 @@ dependencies:
     - bash setup_webdriver.sh:
         background: true
 
-    - bash wait_for_server.sh
+    - bash wait_for_servers.sh
