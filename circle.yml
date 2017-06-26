@@ -16,5 +16,6 @@ dependencies:
         background: true
     - bash setup_webdriver.sh:
         background: true
-    - wget --retry-connrefused --no-check-certificate -T 30 http://localhost:4444
-    - bash wait_for_servers.sh
+    - wget --retry-connrefused -T 30 http://localhost:4444
+    - wget --retry-connrefused -T 30 http://localhost:3000
+    - wget --retry-connrefused -T 30 http://localhost:8000/api/groups/
