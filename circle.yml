@@ -13,3 +13,4 @@ dependencies:
     - bash setup_frontend.sh
     - bash setup_backend.sh
     - bash setup_webdriver.sh
+    - wget --retry-connrefused --no-check-certificate -T 30 http://localhost:4444
