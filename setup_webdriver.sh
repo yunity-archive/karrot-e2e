@@ -2,4 +2,4 @@
 set -eu
 
 $(npm bin)/webdriver-manager update
-$(npm bin)/webdriver-manager start
+$(npm bin)/webdriver-manager start &
