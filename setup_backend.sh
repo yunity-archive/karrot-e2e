@@ -1,12 +1,12 @@
 #!/bin/sh
-set -eu
+set -e
 
 git clone --depth 1 https://github.com/yunity/foodsaving-backend
 cd foodsaving-backend
 # TODO checkout given branch
-#virtualenv env
+virtualenv env
 # TODO restore env from cache
-#source env/bin/activate
+source env/bin/activate
 pip install -r requirements-dev.txt
 pip-sync
 # TODO cache env
