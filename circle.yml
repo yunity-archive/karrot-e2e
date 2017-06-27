@@ -5,10 +5,6 @@ machine:
     version: 3.5.3
   services:
     - redis
-checkout:
-  pre:
-    - if [ ${frontend_branch} ]; then bash push_status.sh foodsaving-frontend pending; fi
-    - if [ ${backend_branch} ]; then bash push_status.sh foodsaving-backend pending; fi
 dependencies:
   pre:
     - createdb fstool_e2etest

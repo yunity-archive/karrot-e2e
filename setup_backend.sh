@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 git clone --depth 1 https://github.com/yunity/foodsaving-backend
@@ -6,6 +6,7 @@ cd foodsaving-backend
 if [ ${backend_branch} ]; then
     git fetch origin ${backend_branch}:${backend_branch}
     git checkout ${backend_branch}
+    (cd .. && bash push_status.sh foodsaving-backend pending)
 fi
 virtualenv env
 # TODO restore env from cache
