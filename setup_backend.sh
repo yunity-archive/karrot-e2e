@@ -4,6 +4,7 @@ set -e
 git clone --depth 1 https://github.com/yunity/foodsaving-backend
 cd foodsaving-backend
 if [ ${backend_branch} ]; then
+    git fetch origin ${backend_branch}:${backend_branch}
     git checkout ${backend_branch}
 fi
 virtualenv env

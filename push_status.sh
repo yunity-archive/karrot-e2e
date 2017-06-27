@@ -5,10 +5,11 @@ repo=$1
 # Status can be one of pending, success, error, or failure.
 status=$2
 
-(cd ${repo} && SHA=$(git rev-parse HEAD))
+cd ${repo}
+SHA=$(git rev-parse HEAD)
 
 curl -u ${GITHUB_CREDENTIALS} -X POST -H "Content-Type: application/json" -d '{
-  "state":"${status}",
+  "state":"'${status}'",
   "context":"ci/circleci-e2e",
-  "target_url":"${CIRCLE_BUILD_URL}"
+  "target_url":"'${CIRCLE_BUILD_URL}'"
 }' https://api.github.com/repos/yunity/${repo}/statuses/${SHA}
