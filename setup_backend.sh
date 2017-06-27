@@ -3,7 +3,9 @@ set -e
 
 git clone --depth 1 https://github.com/yunity/foodsaving-backend
 cd foodsaving-backend
-# TODO checkout given branch
+if [ ${backend_branch} ]; then
+    git checkout ${backend_branch}
+fi
 virtualenv env
 # TODO restore env from cache
 source env/bin/activate

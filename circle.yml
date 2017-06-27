@@ -5,7 +5,10 @@ machine:
     version: 3.5.3
   services:
     - redis
-
+checkout:
+  pre:
+    - if [ ${frontend_branch} ]; then bash push_status.sh foodsaving-frontend pending; fi
+    - if [ ${backend_branch} ]; then bash push_status.sh foodsaving-backend pending; fi
 dependencies:
   pre:
     - createdb fstool_e2etest
@@ -20,3 +23,7 @@ dependencies:
     - wget --retry-connrefused -T 30 http://localhost:4444
     - wget --retry-connrefused -T 30 http://localhost:3000
     - wget --retry-connrefused -T 30 http://localhost:8000/api/groups/
+test:
+  override:
+    - npm test && (bash report_success.sh; exit 0) || (bash report_failure.sh; exit 1)
+    

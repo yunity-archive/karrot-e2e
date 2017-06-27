@@ -3,7 +3,9 @@ set -eu
 
 git clone --depth 1 https://github.com/yunity/foodsaving-frontend
 cd foodsaving-frontend
-# TODO checkout given branch
+if [ ${frontend_branch} ]; then
+    git checkout ${frontend_branch}
+fi
 # TODO restore node_modules from cache
 npm install
 # TODO cache node_modules
