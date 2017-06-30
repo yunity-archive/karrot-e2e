@@ -1,9 +1,11 @@
 #!/bin/bash
-set -eu
+set -e
 
-if [ ${frontend_branch} ]; then
+echo "success"
+if [ -z "${frontend_branch}" ]; then
     bash push_status.sh foodsaving-frontend success;
-fi
-if [ ${backend_branch} ]; then
+elif [ -z "${backend_branch}" ]; then
     bash push_status.sh foodsaving-backend success;
+else
+    echo "no branch"
 fi
