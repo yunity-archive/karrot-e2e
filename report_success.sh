@@ -2,9 +2,9 @@
 set -e
 
 echo "success"
-if [ -z "${frontend_branch}" ]; then
+if [ x"${frontend_branch}" != x ]; then
     bash push_status.sh foodsaving-frontend success;
-elif [ -z "${backend_branch}" ]; then
+elif [ x"${backend_branch}" != x ]; then
     bash push_status.sh foodsaving-backend success;
 else
     echo "no branch"
