@@ -11,7 +11,7 @@ virtualenv env
 # TODO restore env from cache
 source env/bin/activate
 pip install -r requirements-dev.txt
-pip-sync
+pip-sync requirements*.txt
 # TODO cache env
 cp config/local_settings.py.ci config/local_settings.py
 # TODO create database
