@@ -4,10 +4,10 @@
   "description": "end-to-end test suite for the foodsaving tool",
   "main": "index.js",
   "dependencies": {
-    "chai": "^4.0.2",
-    "chai-as-promised": "^7.0.0",
+    "chai": "^4.1.1",
+    "chai-as-promised": "^7.1.1",
     "chai-string": "^1.4.0",
-    "mocha": "^3.4.2",
+    "mocha": "^3.5.0",
     "protractor": "^5.1.2"
   },
   "devDependencies": {},
