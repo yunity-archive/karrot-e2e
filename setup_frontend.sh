@@ -8,7 +8,7 @@ if [ ${frontend_branch} ]; then
     (cd .. && bash push_status.sh foodsaving-frontend pending)
 fi
 # TODO restore node_modules from cache
-npm install
+yarn
 # TODO cache node_modules
 echo "BACKEND=http://localhost:8000" > .env
-npm run dev
+yarn run dev
