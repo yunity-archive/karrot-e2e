@@ -1,7 +1,7 @@
 {
-  "name": "foodsaving-e2e",
+  "name": "karrot-e2e",
   "version": "1.0.0",
-  "description": "end-to-end test suite for the foodsaving tool",
+  "description": "end-to-end test suite for karrot",
   "main": "index.js",
   "dependencies": {
     "chai": "^4.1.1",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yunity/foodsaving-e2e.git"
+    "url": "git+https://github.com/yunity/karrot-e2e.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yunity/foodsaving-e2e/issues"
+    "url": "https://github.com/yunity/karrot-e2e/issues"
   },
-  "homepage": "https://github.com/yunity/foodsaving-e2e#readme"
+  "homepage": "https://github.com/yunity/karrot-e2e#readme"
 }

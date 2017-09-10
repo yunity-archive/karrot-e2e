@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-git clone https://github.com/yunity/foodsaving-backend
-cd foodsaving-backend
+git clone https://github.com/yunity/karrot-backend
+cd karrot-backend
 if [ ${backend_branch} ]; then
     git checkout ${backend_branch}
-    (cd .. && bash push_status.sh foodsaving-backend pending)
+    (cd .. && bash push_status.sh karrot-backend pending)
 fi
 virtualenv env
 # TODO restore env from cache

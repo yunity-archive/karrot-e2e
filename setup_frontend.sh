@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-git clone https://github.com/yunity/foodsaving-frontend
-cd foodsaving-frontend
+git clone https://github.com/yunity/karrot-frontend
+cd karrot-frontend
 if [ ${frontend_branch} ]; then
     git checkout ${frontend_branch}
-    (cd .. && bash push_status.sh foodsaving-frontend pending)
+    (cd .. && bash push_status.sh karrot-frontend pending)
 fi
 # TODO restore node_modules from cache
 yarn
